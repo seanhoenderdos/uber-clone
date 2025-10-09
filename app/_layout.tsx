@@ -6,8 +6,8 @@ import { useEffect } from 'react';
 import { LogBox } from 'react-native';
 import 'react-native-reanimated';
 
-import { tokenCache } from '../lib/auth';
 import '../global.css';
+import { tokenCache } from '../lib/auth';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();

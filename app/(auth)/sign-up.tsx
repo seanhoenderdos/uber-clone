@@ -155,14 +155,7 @@ const SignUp = () => {
             />
           </View>
         </ReactNativeModal>
-        <ReactNativeModal
-          isVisible={showSuccessModal}
-          onModalHide={() => {
-            if (showSuccessModal) {
-              router.replace(`/(root)/(tabs)/home`);
-            }
-          }}
-        >
+        <ReactNativeModal isVisible={showSuccessModal}>
           <View className="min-h-[300px] rounded-2xl bg-white px-7 py-9">
             <Image source={images.check} className="mx-auto my-5 h-[110px] w-[110px]" />
             <Text className="text-center font-JakartaBold text-3xl">Verified</Text>
@@ -173,6 +166,7 @@ const SignUp = () => {
               title="Browse Home"
               onPress={() => {
                 setShowSuccessModal(false);
+                router.replace('/(root)/(tabs)/home');
               }}
               className="mt-5"
             />
